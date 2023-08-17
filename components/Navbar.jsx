@@ -1,9 +1,10 @@
 import React from "react";
-import Wrapper from "@/components/ui/Wrapper";
 import Link from "next/link";
+
+import Wrapper from "@/components/ui/Wrapper";
 import MainNav from "@/components/Main-nav";
 import fetchCategories from "@/actions/categories";
-
+import NavbarActions from "@/components/navbar-actions";
 
 
 const Navbar = async () => {
@@ -16,6 +17,7 @@ const Navbar = async () => {
             <p className="font-bold text-xl"> BigOh</p>
           </Link>
           <MainNav data={categories} />
+          <NavbarActions />
         </div>
       </Wrapper>
     </nav>
