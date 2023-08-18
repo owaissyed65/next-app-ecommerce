@@ -6,9 +6,17 @@ import IconButton from "./icon-button";
 import { GiExpand } from "react-icons/gi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { formatter } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 const ProductCards = ({ item }) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/products/${item?.id}`);
+  };
   return (
-    <div className="group bg-white border p-3 space-y-4 rounded-xl cursor-pointer">
+    <div
+      onClick={handleClick}
+      className="group bg-white border p-3 space-y-4 rounded-xl cursor-pointer"
+    >
       <div className="aspect-square relative rounded-xl bg-gray-100">
         <Image
           src={item?.images?.[0]?.url}

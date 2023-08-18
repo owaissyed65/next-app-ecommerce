@@ -14,7 +14,7 @@ const Navbar = async () => {
       <Wrapper>
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
           <Link className="ml-4 lg:ml-0 flex gap-x-2" href="/">
-            <p className="font-bold text-xl"> BigOh</p>
+            <p className="font-bold text-xl cursor-pointer"> BigOh</p>
           </Link>
           <MainNav data={categories} />
           <NavbarActions />

@@ -1,15 +1,11 @@
-import billboardsCategories from "@/actions/billboards";
+import fetchbillboards from "@/actions/billboards";
 import fetchProducts from "@/actions/products";
 import Billboards from "@/components/billboards";
 import ProductLists from "@/components/product-lists";
 import Wrapper from "@/components/ui/Wrapper";
 
-export const revalidate = 0;
-
 const HomePage = async () => {
-  const data = await billboardsCategories(
-    "e0db3d97-9862-42a9-b2c6-a70d2423cbe1"
-  );
+  const data = await fetchbillboards("e0db3d97-9862-42a9-b2c6-a70d2423cbe1");
   const products = await fetchProducts({
     isFeatured: true,
   });

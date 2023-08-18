@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 import NoResults from "@/components/ui/no-results";
 import ProductCards from "@/components/ui/product-cards";
 const montserrat = Montserrat({ weight: "700", subsets: ["latin"] });
-const ProductLists = ({ title, items = [] }) => {
+const ProductLists = ({ title, items = [], className = "" }) => {
   return (
-    <div className="space-y-4">
+    <div className={cn("space-y-4", className)}>
       <h3 className={cn("font-bold text-3xl", montserrat.className)}>
         {title}
       </h3>
